@@ -27,12 +27,12 @@ gulp.task('browser-sync', function() {
 
 gulp.task('jsLib', function() {
 	return gulp.src([
-			// 'app/assets/libs/'
+			''
 		])
 		.pipe(sourcemaps.init())
-		.pipe(babel())
+		// .pipe(babel())
 		.pipe(concat('libs.min.js'))
-		.pipe(sourcempas.write("."))
+		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest('app/js'));
 });
 
