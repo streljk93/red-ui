@@ -1,0 +1,21 @@
+{
+  "name": "ui",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "jk <strel.jk.93@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}
