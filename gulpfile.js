@@ -10,7 +10,7 @@ const pngquant    = require('imagemin-pngquant');
 const cache       = require('gulp-cache');
 
 gulp.task('sass', function() {
-  return gulp.src('app/assets/components/sass/main.sass')
+  return gulp.src('app/components/sass/main.sass')
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}))
@@ -27,7 +27,9 @@ gulp.task('browser-sync', function() {
 
 gulp.task('jsLib', function() {
 	return gulp.src([
-			''
+			'node_modules/jquery/dist/jquery.min.js',
+			'node_modules/popper.js/dist/popper.min.js',
+			'node_modules/bootstrap/dist/js/bootstrap.min.js',
 		])
 		.pipe(sourcemaps.init())
 		// .pipe(babel())
@@ -37,7 +39,7 @@ gulp.task('jsLib', function() {
 });
 
 gulp.task('watch', ['browser-sync', 'sass', 'jsLib'], function() {
-	gulp.watch('app/assets/components/**/*.+(scss|sass)', ['sass']);
+	gulp.watch('app/components/**/*.+(scss|sass)', ['sass']);
 	gulp.watch('app/index.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
