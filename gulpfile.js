@@ -28,11 +28,11 @@ gulp.task('browser-sync', function() {
 gulp.task('jsLib', function() {
 	return gulp.src([
 			'node_modules/jquery/dist/jquery.min.js',
-			'node_modules/popper.js/dist/popper.min.js',
+			'node_modules/popper.js/dist/umd/popper.min.js',
 			'node_modules/bootstrap/dist/js/bootstrap.min.js',
 		])
 		.pipe(sourcemaps.init())
-		// .pipe(babel())
+		.pipe(babel())
 		.pipe(concat('libs.min.js'))
 		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest('app/js'));
