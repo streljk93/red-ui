@@ -1,0 +1,32 @@
+.jcard
+	margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+	&__wrap
+		box-shadow: 0 0 10px rgba(0,0,0,0.5)
+	&__header
+		padding: 10px
+		height: 200px
+		background-size: cover
+		background-position: top center
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__title
+		text-transform: uppercase
+		font-size: $font-size-base + 0.5
+		font-family: Russo One
+		&:after
+			content: ''
+			display: block
+			height: 4px
+			width: 50%
+			background: white
+			margin-top: 10px
+	&__price
+		font-size: $font-size-base + 0.5
+
+	&__content
+		padding: 10px
+		background: white
+		color: black

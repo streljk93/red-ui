@@ -1,0 +1,39 @@
+.jblock
+	&:before
+		content: ''
+		display: block
+		height: 5px
+		width: 100%
+		background: repeating-linear-gradient(45deg,#ECB33A,#ECB33A 10px,black 10px,black 20px)
+	&__wrap
+		padding-top: 50px
+		padding-bottom: 50px
+	&__title
+		font-family: 'Russo One'
+		font-size: $font-size-base + 2
+		text-transform: uppercase
+		display: flex
+		flex-direction: column
+		align-items: center
+		&:after
+			content: ''
+			display: block
+			height: 4px
+			width: 100px
+			background: theme-color('warning')
+	// &__hr
+	// 	text-align: center
+	// 	font-style: italic
+	// 	color: gray("600")
+	// 	&:before, &:after
+	// 		content: '"'
+	&__content
+		margin-top: 30px
+
+.jblock_theme-accent
+	background: theme-color('danger')
+	color: white
+
+.jblock_theme-primary
+	background: gray('900')
+	color: white

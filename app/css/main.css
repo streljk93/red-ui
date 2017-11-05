@@ -8107,3 +8107,71 @@ a.text-dark:focus, a.text-dark:hover {
 
 .icon-bull:before {
   content: "\e900"; }
+
+.jblock:before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: repeating-linear-gradient(45deg, #ECB33A, #ECB33A 10px, black 10px, black 20px); }
+
+.jblock__wrap {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.jblock__title {
+  font-family: 'Russo One';
+  font-size: 3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .jblock__title:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100px;
+    background: #ffc107; }
+
+.jblock__content {
+  margin-top: 30px; }
+
+.jblock_theme-accent {
+  background: #dc3545;
+  color: white; }
+
+.jblock_theme-primary {
+  background: #212529;
+  color: white; }
+
+.jcard {
+  margin-bottom: 30px; }
+  .jcard:last-child {
+    margin-bottom: 0; }
+  .jcard__wrap {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  .jcard__header {
+    padding: 10px;
+    height: 200px;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .jcard__title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: Russo One; }
+    .jcard__title:after {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 50%;
+      background: white;
+      margin-top: 10px; }
+  .jcard__price {
+    font-size: 1.5rem; }
+  .jcard__content {
+    padding: 10px;
+    background: white;
+    color: black; }
