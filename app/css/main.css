@@ -8358,8 +8358,6 @@ a.text-dark:focus, a.text-dark:hover {
   margin-bottom: 30px; }
   .jcard:last-child {
     margin-bottom: 0; }
-  .jcard__wrap {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
   .jcard__header {
     padding: 10px;
     height: 200px;
@@ -8389,7 +8387,8 @@ a.text-dark:focus, a.text-dark:hover {
 .jcard_theme-promotion {
   cursor: pointer;
   background: #fff;
-  color: #000; }
+  color: #000;
+  height: 200px; }
   .jcard_theme-promotion:hover {
     box-shadow: 0 0 15px black; }
     .jcard_theme-promotion:hover .jcard__header {
@@ -8432,7 +8431,7 @@ a.text-dark:focus, a.text-dark:hover {
     padding: 5px; }
 
 .jcarousel {
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
   .jcarousel__item {
-    margin: 10px; }
+    margin: 10px 10px 0 10px; }
