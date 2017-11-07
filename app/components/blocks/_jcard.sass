@@ -25,8 +25,27 @@
 			margin-top: 10px
 	&__price
 		font-size: $font-size-base + 0.5
-
 	&__content
 		padding: 10px
 		background: white
 		color: black
+
+.jcard_theme-promotion
+	cursor: pointer
+	background: $white
+	color: $black
+	&:hover
+		box-shadow: 0 0 15px black
+		.jcard__header
+			background: theme-color('danger')
+			color: $white
+	.jcard__header
+		height: auto
+	.jcard__title:after
+		height: 0px
+		margin-top: 0px
+	&-active
+		box-shadow: 0 0 15px black
+		.jcard__header
+			background: theme-color('danger')
+			color: $white		

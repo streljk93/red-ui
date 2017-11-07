@@ -27,9 +27,14 @@ gulp.task('browser-sync', function() {
 
 gulp.task('jsLib', function() {
 	return gulp.src([
+			'node_modules/moment/min/moment.min.js',
 			'node_modules/jquery/dist/jquery.min.js',
 			'node_modules/popper.js/dist/umd/popper.min.js',
 			'node_modules/bootstrap/dist/js/bootstrap.min.js',
+			'node_modules/slick-carousel/slick/slick.min.js',
+
+			// bem blocks
+			'app/components/blocks/**/*.js',
 		])
 		.pipe(sourcemaps.init())
 		.pipe(babel())
@@ -40,6 +45,7 @@ gulp.task('jsLib', function() {
 
 gulp.task('watch', ['browser-sync', 'sass', 'jsLib'], function() {
 	gulp.watch('app/components/**/*.+(scss|sass)', ['sass']);
+	gulp.watch('app/components/**/*.js', ['jsLib']);
 	gulp.watch('app/index.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
