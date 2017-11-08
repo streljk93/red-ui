@@ -4,7 +4,18 @@ timer(start, 30, function() {
     console.log('ok');
 });
 
-$('.jcarousel').slick({
+$('.js-jcarousel__service').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  adaptiveHeight: true,
+  arrows: false,
+});
+
+$('.js-jcarousel__promotions').slick({
   dots: false,
   infinite: true,
   speed: 300,
@@ -43,4 +54,14 @@ $('.jcarousel').slick({
       }
     }
   ]
+});
+
+$('.jcollapse .jcollapse__button').on('click', function() {
+  var aria = $(this)[0].attributes['aria-expanded'].value;
+  var show = (aria === 'true') ? false : true;
+  if(show) {
+    $(this).find('i')[0].className = 'fa fa-chevron-up';
+  } else {
+    $(this).find('i')[0].className = 'fa fa-chevron-down';
+  }
 });
