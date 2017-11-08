@@ -8452,3 +8452,53 @@ a.text-dark:focus, a.text-dark:hover {
 
 .jcollapse__content {
   margin-top: 20px; }
+
+.jmedia {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px; }
+  .jmedia__item {
+    flex-basis: 25%;
+    padding: 10px;
+    height: 250px; }
+  .jmedia__border {
+    background: white;
+    border-radius: 3px;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer; }
+  .jmedia__icon {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 4em;
+    display: none; }
+  .jmedia__backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2000;
+    display: none; }
+  .jmedia_open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2001; }
+
+@media only screen and (max-width: 992px) {
+  .jmedia__item {
+    flex-basis: 50%; } }
+
+@media only screen and (max-width: 576px) {
+  .jmedia__item {
+    flex-basis: 100%; } }
