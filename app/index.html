@@ -13,7 +13,7 @@
   <div class="jpage">
     <nav class="navbar jpage__navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand text-uppercase font-weight-bold text-danger" href="#" style="font-family: Russo One;"><span class="icon-bull" style="font-size: 22px"></span> red</a>  
+        <a href="#index" class="navbar-brand text-uppercase font-weight-bold text-danger" href="#" style="font-family: Russo One;"><span class="icon-bull" style="font-size: 22px"></span> red</a>  
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,28 +21,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Акции</a>
+              <a class="nav-link" href="#promotions">Акции</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">О нас</a>
+              <a class="nav-link" href="#aboutus">О нас</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Услуги</a>
+              <a class="nav-link" href="#services">Услуги</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Прайс</a>
+              <a class="nav-link" href="#price">Прайс</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#">Тренеры / Персонал</a>
             </li> -->
             <li class="nav-item">
-              <a href="#" class="nav-link">Спортзал</a>
+              <a href="#sporthall" class="nav-link">Спортзал</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Контакты</a>
+              <a href="#contact" class="nav-link">Контакты</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="btn btn-danger">Заказать звонок</a>
+              <a href="#contact" class="btn btn-danger">Заказать звонок</a>
             </li>
           </ul>
         </div>
@@ -50,7 +50,7 @@
     </nav>
     <div style="background: repeating-linear-gradient(45deg,#ECB33A,#ECB33A 10px,black 10px,black 20px); height: 5px; position: fixed; width: 100%; top: 56px; z-index: 1"></div>
 
-    <div class="jheader jpage__header"> 
+    <div class="jheader jpage__header" id="index">
       <div class="container">
         <div class="row">
           <div class="jheader__text col-md-5">
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="jblock jblock_theme-primary jpage__block">
+    <div class="jblock jblock_theme-primary jpage__block" id="promotions">
       <div style="background-image: url(img/pattern.png); background-size: 500px">
         <div class="jblock__wrap container">
           <div class="jblock__title">Акции</div>
@@ -99,6 +99,12 @@
                         <span class="jcounter__seconds"></span>
                       </div>  
                     </div>
+                  </div>
+                  <div>
+                    <a href="#contact" class="btn btn-danger w-100 mt-4 text-uppercase" style="font-family: Russo One">
+                      <i class="fa fa-envelope"></i>
+                      Отправить заявку
+                    </a>
                   </div>
                 </div>
               </div>
@@ -180,7 +186,7 @@
       </div>
     </div>
 
-    <div class="jblock jblock_theme-accent jpage__block">
+    <div class="jblock jblock_theme-accent jpage__block" id="aboutus">
       <div class="jblock__wrap container">
         <div class="jblock__title">О нас</div>
         <div class="jblock__content row">
@@ -199,7 +205,7 @@
       </div>
     </div>
 
-    <div class="jblock jblock_theme-primary jpage__block">
+    <div class="jblock jblock_theme-primary jpage__block" id="services">
       <div class="jblock__wrap container">
         <div class="jblock__title">Услуги</div>
         <div class="jblock__content">
@@ -257,7 +263,7 @@
       </div>
     </div>
 
-    <div class="jblock jblock_theme-primary jpage__block">
+    <div class="jblock jblock_theme-primary jpage__block" id="price">
       <div style="background-image: url(img/pattern.png); background-size: 500px;">
         <div class="jblock__wrap container">
           <div class="jblock__title">Прайс</div>
@@ -364,7 +370,7 @@
               </div>
 
               <div class="col-md-12">
-                <button class="btn btn-danger w-100 text-uppercase">
+                <button class="btn btn-danger w-100 text-uppercase" style="font-family: Russo One">
                   больше информации о ценах
                 </button>
               </div>
@@ -375,52 +381,136 @@
       </div>
     </div>
 
-    <div class="jblock jblock_theme-accent jpage__block">
+    <div class="jblock jblock_theme-accent jpage__block" id="sporthall">
       <div class="jblock__wrap container">
         <div class="jblock__title">Спортзал</div>
         <div class="jblock__content">
           <div class="jmedia">
             <div class="jmedia__item">
-              <div class="jmedia__border" style="background-image: url(img/slider_1.jpg);">
-                <i class="fa fa-search-plus jmedia__icon"></i>
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url(img/header2.jpg);">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
               </div>
             </div>
             <div class="jmedia__item">
-              <div class="jmedia__border" style="background-image: url(img/slider_3.jpg);">
-                <i class="fa fa-search-plus jmedia__icon"></i>
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url(img/header1.jpg);">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
               </div>
             </div>
             <div class="jmedia__item">
-              <div class="jmedia__border" style="background-image: url(img/header2.jpg);">
-                <i class="fa fa-search-plus jmedia__icon"></i>
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url(img/bonus_card.jpg);">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
               </div>
             </div>
             <div class="jmedia__item">
-              <div class="jmedia__border" style="background-image: url(img/slider_3.jpg);">
-                <i class="fa fa-search-plus jmedia__icon"></i>
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url(img/price_1.png);">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
               </div>
             </div>
             <div class="jmedia__item">
-              <div class="jmedia__border" style="background-image: url(img/header1.jpg);">
-                <i class="fa fa-search-plus jmedia__icon"></i>
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url(img/price_2.png);">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
               </div>
             </div>
             <div class="jmedia__item">
-              <div class="jmedia__border" style="background-image: url(img/price_3.png);">
-                <i class="fa fa-search-plus jmedia__icon"></i>
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url(img/price_3.png);">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
               </div>
             </div>
             <div class="jmedia__item">
-              <div class="jmedia__border" style="background-image: url(img/slider_6.jpg);">
-                <i class="fa fa-search-plus jmedia__icon"></i>
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url(img/slider_4.jpg);">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
               </div>
             </div>
             <div class="jmedia__backdrop"></div>
           </div>
-          <!-- <div class="row">
-          </div> -->
         </div>
       </div>
+    </div>
+
+    <div class="jblock jblock_theme-primary jpage__block">
+      <iframe
+        width="100%"
+        height="500px"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNwtr-txBJkERRG2iz2mjQYs&key=AIzaSyCH0CCjoCd_mPd3T6u5GsS_KWrOD3_YDVU" allowfullscreen>
+      </iframe>  
+    </div>
+
+    <div class="jblock jblock_theme-primary jpage__block" id="contact">
+      <div class="jblock__wrap container">
+        <div class="jblock__title">Контакты</div>
+        <div class="jblock__content">
+          <div class="jfooter row">
+
+            <div class="jfooter__contact col-md-6">
+              <div class="jcontact h-100">
+                <div class="jcontact__item">
+                  <div class="jcontact__element">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <div class="jcontact__element">
+                    email@email.ru
+                  </div>
+                </div>
+                <div class="jcontact__item">
+                  <div class="jcontact__element">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <div class="jcontact__element">
+                    +7 (910) 368-45-65
+                  </div>
+                </div>
+                <div class="jcontact__item">
+                  <div class="jcontact__element">
+                    <i class="fa fa-map"></i>
+                  </div>
+                  <div class="jcontact__element">
+                    street Avenu
+                  </div>
+                </div>  
+              </div>
+            </div>
+
+            <div class="jfeedback jfooter__feedback col-md-6 mt-4 mt-md-0">
+              <div class="jfeedback__row">
+                <input type="text" class="jfeedback__input" placeholder="Ваше имя...">
+                <input type="text" class="jfeedback__input" placeholder="Ваш e-mail...">
+              </div>
+              <div class="jfeedback__row">
+                <textarea class="jfeedback__input" rows="4" placeholder="Ваше сообщение..."></textarea>
+              </div>
+              <div class="jfeedback__row">
+                <button class="btn btn-danger w-100 text-uppercase" style="font-family: Russo One">
+                  <i class="fa fa-envelope"></i>
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <iframe
+        width="100%"
+        height="500px"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNwtr-txBJkERRG2iz2mjQYs&key=AIzaSyCH0CCjoCd_mPd3T6u5GsS_KWrOD3_YDVU" allowfullscreen>
+      </iframe> -->
+
     </div>
 
   </div>
