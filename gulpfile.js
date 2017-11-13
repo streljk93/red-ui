@@ -32,9 +32,27 @@ gulp.task('jsLib', function() {
 			'node_modules/popper.js/dist/umd/popper.min.js',
 			'node_modules/bootstrap/dist/js/bootstrap.min.js',
 			'node_modules/slick-carousel/slick/slick.min.js',
+			'node_modules/angular/angular.min.js',
 
 			// bem blocks
 			'app/components/blocks/**/*.js',
+
+			// APP ANGULAR
+			// application
+			'app/js/app.js',
+
+			// config
+			'app/js/shared/config/config.js',
+
+			// services
+			'app/js/shared/services/promotions.js',
+
+			// directives
+			'app/js/shared/directives/slick.js',
+			
+			// controllers
+			'app/js/components/promotions/controller.js',
+
 		])
 		.pipe(sourcemaps.init())
 		.pipe(babel())
@@ -45,7 +63,12 @@ gulp.task('jsLib', function() {
 
 gulp.task('watch', ['browser-sync', 'sass', 'jsLib'], function() {
 	gulp.watch('app/components/**/*.+(scss|sass)', ['sass']);
+
 	gulp.watch('app/components/**/*.js', ['jsLib']);
+	gulp.watch('app/js/app.js', ['jsLib']);
+	gulp.watch('app/js/components/**/*.js', ['jsLib']);
+	gulp.watch('app/js/shared/**/*.js', ['jsLib']);
+
 	gulp.watch('app/index.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });

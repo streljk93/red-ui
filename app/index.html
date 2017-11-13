@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body ng-app="jk_site" ng-cloak>
 
   <div class="jpage">
     <nav class="navbar jpage__navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="jblock jblock_theme-primary jpage__block" id="promotions">
+    <div class="jblock jblock_theme-primary jpage__block" id="promotions" ng-controller="PromotionsController">
       <div style="background-image: url(img/pattern.png); background-size: 500px">
         <div class="jblock__wrap container">
           <div class="jblock__title">Акции</div>
@@ -72,10 +72,10 @@
             <div class="jpromotions">
               <div class="jpromotions__info row">
                 <div class="col-lg-8">
-                  <div class="jpromotions__title">Подарочная карта <span class="badge badge-success">new</span></div>
+                  <div class="jpromotions__title">{{promotionSelected.promotion_name}} <span class="badge badge-success">new</span></div>
                   <div class="jpromotions__content">
-                    <img src="img/bonus_card.jpg" class="img-fluid float-left pr-3" style="width: 300px">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ad laborum rerum mollitia error, dolorem provident neque quos placeat quia quasi et iure, inventore eum corrupti odio. Delectus perspiciatis sequi fugiat, voluptatibus asperiores iste repellendus magni, maiores ad autem voluptates iusto quibusdam in debitis dolores eveniet labore sapiente aliquid animi cum eius consequatur aut molestiae. Maxime earum dolore velit, vero, placeat nemo harum ea nulla reprehenderit deleniti accusantium, quis ipsa vel corrupti! Esse eligendi, itaque blanditiis debitis sed, eveniet voluptates voluptatibus ex atque sunt possimus ipsam molestiae odio incidunt! Officiis tenetur optio incidunt perspiciatis tempora corporis laboriosam eum nostrum sint.
+                    <img src="{{promotionSelected.media_url}}" class="img-fluid float-left pr-3" style="width: 300px">
+                    {{promotionSelected.promotion_description}}
                   </div>
                 </div>
                 <div class="col-lg-4 mt-lg-0 mt-4">
@@ -111,78 +111,24 @@
             </div>
           </div>
         </div>
-        <div class="jcarousel js-jcarousel__promotions">
-          <div class="jcarousel__item">
-            <div class="jcard jcard_theme-promotion jcard_theme-promotion-active">
+        <slick-promotion class="jcarousel js-jcarousel__promotions">
+
+          <div class="jcarousel__item" ng-repeat="(key, promotion) in promotionList" ng-click="selectPromotion(key)" ng-cloak>
+            <div class="jcard jcard_theme-promotion {{(selectedKey == key) ? 'jcard_theme-promotion-active' : ''}}">
               <div class="jcard__wrap">
                 <div class="jcard__header">
                   <div class="jcard__title">
-                    Подарочная карта <div class="badge badge-success">new</div>
+                    {{promotion.promotion_name}} <div class="badge badge-success">new</div>
                   </div>
                 </div>
                 <div class="jcard__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eligendi quia ipsam laudantium quaerat, veritatis, cumque dolorum excepturi delectus nostrum. Laudantium esse tempora pariatur eveniet, quo dolore illo nesciunt saepe.
+                  {{promotion.promotion_description}}
                 </div>  
               </div>
             </div>
           </div>
-          <div class="jcarousel__item">
-            <div class="jcard jcard_theme-promotion">
-              <div class="jcard__wrap">
-                <div class="jcard__header">
-                  <div class="jcard__title">
-                    Бонусная карта <div class="badge badge-success">new</div>
-                  </div>
-                </div>
-                <div class="jcard__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, aspernatur.
-                </div>  
-              </div>
-            </div>
-          </div>
-          <div class="jcarousel__item">
-            <div class="jcard jcard_theme-promotion">
-              <div class="jcard__wrap">
-                <div class="jcard__header">
-                  <div class="jcard__title">
-                    Дисконтная карта
-                  </div>
-                </div>
-                <div class="jcard__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eligendi quia ipsam laudantium quaerat, veritatis, cumque dolorum excepturi delectus nostrum. Laudantium esse tempora pariatur eveniet, quo dolore illo nesciunt saepe.
-                </div>  
-              </div>
-            </div>
-          </div>
-          <div class="jcarousel__item">
-            <div class="jcard jcard_theme-promotion">
-              <div class="jcard__wrap">
-                <div class="jcard__header">
-                  <div class="jcard__title">
-                    Выходные дни <div class="badge badge-success">new</div>
-                  </div>
-                </div>
-                <div class="jcard__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eligendi quia ipsam laudantium quaerat, veritatis, cumque dolorum excepturi delectus nostrum. Laudantium esse tempora pariatur eveniet, quo dolore illo nesciunt saepe.
-                </div>  
-              </div>
-            </div>
-          </div>
-          <div class="jcarousel__item">
-            <div class="jcard jcard_theme-promotion">
-              <div class="jcard__wrap">
-                <div class="jcard__header">
-                  <div class="jcard__title">
-                    Скидка 30% <div class="badge badge-success">new</div>
-                  </div>
-                </div>
-                <div class="jcard__content">
-                  Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего lorem заглавных океана там! Семь, она ее себя буквоград!
-                </div>  
-              </div>
-            </div>
-          </div>
-        </div>
+
+        </slick-promotion>
       </div>
     </div>
 

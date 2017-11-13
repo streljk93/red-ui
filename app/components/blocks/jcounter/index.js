@@ -1,9 +1,17 @@
-function timer(start, end) {
+function Timer() {
+    this.intervalList = [];
+}
+
+Timer.prototype.set = function(start, end) {
+    var hours = moment.duration(moment(new Date(end)).diff(moment(new Date(start))));
+
     var _callback = arguments[arguments.length - 1];
     if(!_callback) return console.error('_callback not found');
 
     // start and end initialize
-    end = moment(start).add(end, 'h');
+    console.log(start);
+    end = moment(new Date(start)).add(hours, 'h');
+    console.log(end);
 
     var interval = setInterval(function() {
         if(moment(new Date()).isBefore(end)) {
@@ -15,7 +23,19 @@ function timer(start, end) {
             $('.jcounter__seconds').text(duration.seconds());
         } else {
             _callback();
-            clearInterval(interval);
+            clearInterval(this.interval);
         }
     }, 1000);
+
+    this.intervalList.push(interval);
 }
+
+Timer.prototype.clear = function() {
+    this.intervalList.forEach(function(interval) {
+        clearInterval(interval);
+        $('.jcounter__days').text('');
+        $('.jcounter__hours').text('');
+        $('.jcounter__minutes').text('');
+        $('.jcounter__seconds').text('');
+    });
+};
