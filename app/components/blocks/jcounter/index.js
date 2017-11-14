@@ -9,9 +9,7 @@ Timer.prototype.set = function(start, end) {
     if(!_callback) return console.error('_callback not found');
 
     // start and end initialize
-    console.log(start);
     end = moment(new Date(start)).add(hours, 'h');
-    console.log(end);
 
     var interval = setInterval(function() {
         if(moment(new Date()).isBefore(end)) {
