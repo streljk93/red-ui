@@ -6,8 +6,8 @@ var app = express();
 
 // setting
 app.use(express.static('app'));
-var port = process.env.PORT || 3000
+app.set('port', process.env.PORT || 3000);
 
-app.listen(port, function() {
-	console.log('server started... ');
+app.listen(app.get('port'), function() {
+	console.log('server started '+ app.get('port'));
 });
