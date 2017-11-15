@@ -46,12 +46,14 @@ gulp.task('jsLib', function() {
 
 			// services
 			'app/js/shared/services/promotions.js',
+			'app/js/shared/services/services.js',
 
 			// directives
 			'app/js/shared/directives/slick.js',
 			
 			// controllers
 			'app/js/components/promotions/controller.js',
+			'app/js/components/services/controller.js',
 
 		])
 		.pipe(sourcemaps.init())
