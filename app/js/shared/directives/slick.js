@@ -13,7 +13,8 @@ angular.module('jk_site').directive('slickPromotion', function($timeout) {
               centerMode: true,
               adaptiveHeight: true,
               mobileFirst: true,
-              arrows: false,
+              prevArrow: '<i class="fa fa-chevron-left" style="position:absolute;top:45%;left: 10px;color:red;z-index:999;font-size:40px;cursor:pointer;"></i>',
+              nextArrow: '<i class="fa fa-chevron-right" style="position:absolute;top:45%;right: 10px;color:red;z-index:999;font-size:40px;cursor:pointer;"></i>',
               responsive: [
                 {
                   breakpoint: 1024,

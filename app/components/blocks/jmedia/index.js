@@ -1,4 +1,4 @@
-(function() {
+var bemMediaComponent = function() {
 
 	Array.prototype.forEach.call(document.querySelectorAll('.jmedia__image'), function(item) {
 		var icon = item.firstElementChild;
@@ -40,4 +40,5 @@
 
 	});
 
-}());
+};
+bemMediaComponent();

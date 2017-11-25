@@ -1,17 +1,19 @@
-const gulp        = require('gulp');
-const sass        = require('gulp-sass');
-const browserSync = require('browser-sync');
-const concat      = require('gulp-concat');
-const sourcemaps  = require('gulp-sourcemaps');
-const babel       = require('gulp-babel');
-const del         = require('del');
-const imagemin    = require('gulp-imagemin');
-const pngquant    = require('imagemin-pngquant');
-const cache       = require('gulp-cache');
+const gulp         = require('gulp');
+const sass         = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync  = require('browser-sync');
+const concat       = require('gulp-concat');
+const sourcemaps   = require('gulp-sourcemaps');
+const babel        = require('gulp-babel');
+const del          = require('del');
+const imagemin     = require('gulp-imagemin');
+const pngquant     = require('imagemin-pngquant');
+const cache        = require('gulp-cache');
 
 gulp.task('sass', function() {
   return gulp.src('app/components/sass/main.sass')
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}))
 });
@@ -47,6 +49,7 @@ gulp.task('jsLib', function() {
 			// services
 			'app/js/shared/services/promotions.js',
 			'app/js/shared/services/services.js',
+			'app/js/shared/services/medialist.js',
 
 			// directives
 			'app/js/shared/directives/slick.js',
@@ -54,6 +57,7 @@ gulp.task('jsLib', function() {
 			// controllers
 			'app/js/components/promotions/controller.js',
 			'app/js/components/services/controller.js',
+			'app/js/components/media/controller.js',
 
 		])
 		.pipe(sourcemaps.init())
