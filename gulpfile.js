@@ -50,6 +50,7 @@ gulp.task('jsLib', function() {
 			'app/js/shared/services/promotions.js',
 			'app/js/shared/services/services.js',
 			'app/js/shared/services/medialist.js',
+			'app/js/shared/services/notification.js',
 
 			// directives
 			'app/js/shared/directives/slick.js',
@@ -58,6 +59,7 @@ gulp.task('jsLib', function() {
 			'app/js/components/promotions/controller.js',
 			'app/js/components/services/controller.js',
 			'app/js/components/media/controller.js',
+			'app/js/components/feedback/controller.js',
 
 		])
 		.pipe(sourcemaps.init())
