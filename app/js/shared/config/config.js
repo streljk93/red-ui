@@ -4,7 +4,7 @@ angular.module('jk_site').constant('config', {
 
 	url: {
 		base: '',
-		rest: 'http://jkcms.ru/',
+		rest: 'http://test.jkcms.ru/',
 	}
 
 })

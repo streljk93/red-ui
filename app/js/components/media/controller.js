@@ -18,7 +18,7 @@ angular.module('jk_site').controller('MediaController', function PortfolioContro
 	};
 
 	$scope.getPortfolio = function() {
-		MediaListService.loadByGroup('спортзал').then(function(response) {
+		MediaListService.loadByGroup('работы').then(function(response) {
 			$scope.loaded.sporthall = true;
 			if(response.data.success) {
 				$scope.media.sporthall.list = response.data.info;
@@ -39,7 +39,6 @@ angular.module('jk_site').controller('MediaController', function PortfolioContro
 			if($scope.media[space].clone.length === 0) return;
 
 			var media = $scope.media[space].clone.shift();
-			console.log($scope.media[space].clone);
 			$scope.media[space].stack.push(media);
 		}
 	};

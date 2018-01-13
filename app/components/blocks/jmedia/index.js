@@ -13,11 +13,10 @@ var bemMediaComponent = function() {
 			});
 		}
 
-		// open image on full window
-		item.addEventListener('click', function() {
-			var mediaItem = this.parentElement.parentElement;
+		item.onclick = function() {
+			var mediaItem = item.parentElement.parentElement;
 			var backdrop = mediaItem.parentElement.lastElementChild;
-			var icon = this.firstElementChild;
+			var icon = item.firstElementChild;
 
 			// disable
 			if(mediaItem.classList.contains('jmedia_open')) {
@@ -38,7 +37,7 @@ var bemMediaComponent = function() {
 				icon.classList.remove('fa-search-plus');
 				icon.classList.add('fa-search-minus');
 			}
-		});
+		}
 
 	});
 
