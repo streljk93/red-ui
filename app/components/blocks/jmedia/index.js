@@ -22,6 +22,7 @@ var bemMediaComponent = function() {
 			// disable
 			if(mediaItem.classList.contains('jmedia_open')) {
 				mediaItem.classList.remove('jmedia_open');
+				document.querySelector('.shadow').classList.remove('shadow_open');
 
 				backdrop.style.display = 'none';
 
@@ -30,6 +31,7 @@ var bemMediaComponent = function() {
 			// enable
 			} else {
 				mediaItem.classList.add('jmedia_open');
+				document.querySelector('.shadow').classList.add('shadow_open');
 
 				backdrop.style.display = 'block';
 

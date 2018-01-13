@@ -9427,14 +9427,28 @@ a.text-dark:focus, a.text-dark:hover {
     z-index: 2000;
     display: none; }
   .jmedia_open {
-    padding: 6% 10px;
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2001; }
+    z-index: 2002; }
+    .jmedia_open .jmedia__image {
+      background-size: contain;
+      background-color: transparent; }
+
+.shadow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2001;
+  display: none; }
+  .shadow_open {
+    display: block; }
 
 @media only screen and (max-width: 992px) {
   .jmedia__item {
