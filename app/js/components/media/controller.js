@@ -18,7 +18,7 @@ angular.module('jk_site').controller('MediaController', function PortfolioContro
 	};
 
 	$scope.getPortfolio = function() {
-		MediaListService.loadByGroup('работы').then(function(response) {
+		MediaListService.loadByGroup('спортзал').then(function(response) {
 			$scope.loaded.sporthall = true;
 			if(response.data.success) {
 				$scope.media.sporthall.list = response.data.info;
