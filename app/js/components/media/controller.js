@@ -46,6 +46,9 @@ angular.module('jk_site').controller('MediaController', function PortfolioContro
 
 	$scope.addImage = function() {
 		$scope.pushImage('sporthall', 8);
+		$timeout(function() {
+			bemMediaComponent();
+		});
 	};
 
 });
