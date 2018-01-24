@@ -9248,6 +9248,20 @@ a.text-dark:focus, a.text-dark:hover {
   background: #343a40;
   color: white; }
 
+.jblock_theme-item .jblock__wrap {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.jblock_theme-item .jblock__title {
+  font-family: 'Russo One';
+  font-size: 1.6rem;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left; }
+
+.jblock_theme-item:before {
+  background: transparent; }
+
 .jcard {
   margin-bottom: 30px; }
   .jcard:last-child {
