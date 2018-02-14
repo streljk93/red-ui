@@ -9161,6 +9161,10 @@ a.text-dark:focus, a.text-dark:hover {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'red';
+  src: url("../fonts/red/3.otf") format("opentype"); }
+
 .jheader {
   height: 100vh;
   background-image: url(../img/header3.jpg);
